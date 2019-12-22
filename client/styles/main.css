@@ -1,0 +1,26 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+
+body {
+    background-color: #fefbfa !important;
+}
+
+.loader {
+    animation-name: spin;
+    animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+  }
+  
