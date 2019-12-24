@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node server/index",
     "prettier": "prettier --write  './**/*.js'",
-    "build:client": "export BUILD_TYPE=client && webpack --mode=production",
+    "build:client": "cross-env BUILD_TYPE=client && webpack --mode=production",
     "build": "yarn build:client && yarn build:server",
     "start": "node dist/index",
     "build:server": "babel --plugins @babel/plugin-transform-runtime server/ --out-dir dist/ --copy-files"
@@ -19,6 +19,7 @@
     "axios": "^0.18.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
+    "cross-env": "^6.0.3",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.5.1",
